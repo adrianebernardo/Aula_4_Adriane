@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(-45deg, #906196, #942b8b, #906196, #942b8b, #906196, #942b8b, #906196, #942b8b);
+  background-size: 400% 400%;
+  animation: fundo 12s ease infinite;
+}
+
+@keyframes fundo {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body.pendentes  { --cor: #e6a9db; }
+body.concluidas { --cor: #fc0dc0; }
+body.excluidas  { --cor: #721f5d; }
+
+h1 {
+  font-family: "Pirata One", cursive;
+  font-size: 64px; 
+  text-align: center;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+  color: white;
+}
+
+.filtros {
+  text-align: center;
+  margin: 0 auto 25px auto;
+}
+
+.filtros a {
+  display: inline-block;
+  padding: 10px 24px;
+  margin: 0 8px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.filtros .pendentes  { background-color: #e6a9db; }
+.filtros .concluidas { background-color: #fc0dc0; }
+.filtros .excluidas  { background-color: #721f5d    ; }
+
+.tarefas {
+  list-style: none;
+  padding: 0;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.tarefas li {
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 2px solid var(--cor);
+  background-color: white;
+  color: gray;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.tarefas li:nth-child(even) {
+  background-color: var(--cor);
+  color: white;
+}
+
+.tarefas li:hover {
+  transform: scale(1.05);
+}
+
+.caixa {
+  border: 2px solid white;   
+  border-radius: 20px;       
+  padding: 40px 50px;        
+  box-sizing: border-box;
+}
